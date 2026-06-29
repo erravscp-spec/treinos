@@ -26,24 +26,24 @@ export const PHASES = [
 ];
 
 const EX = {
-  sentadilha_bulgara: { nome: 'Sentadilha búlgara', desc: 'Pé de trás apoiado num banco/cadeira, desce a perna da frente.' },
-  afundo_impulso: { nome: 'Afundo com impulso controlado', desc: 'Afundo normal — adiciona um pequeno impulso a partir da semana 2.' },
-  prancha_lateral: { nome: 'Prancha lateral', desc: 'Apoio no antebraço, corpo alinhado, mantém a posição.' },
-  prancha_perna: { nome: 'Prancha com elevação de perna', desc: 'Prancha frontal, eleva uma perna de cada vez sem rodar o quadril.' },
-  ponte_unilateral: { nome: 'Ponte a uma perna', desc: 'Deitado, uma perna estendida, eleva o quadril com a outra perna apoiada.' },
-  step_up: { nome: 'Step-up com tempo sob tensão', desc: 'Sobe a um banco/step controlando bem a descida (3s).' },
-  core_antirrotacao: { nome: 'Core anti-rotação (dead bug)', desc: 'Deitado, braço e perna opostos estendem lentamente sem deixar as costas arquear.' },
-  sentadilha_salto: { nome: 'Sentadilha com salto', desc: 'Sentadilha normal, explode para um salto vertical no topo.' },
-  step_up_rapido: { nome: 'Step-up rápido', desc: 'Mesmo step-up, agora em ritmo explosivo.' },
-  nordico: { nome: 'Nórdico (isquiotibiais)', desc: 'Ajoelhado, tornozelos fixos, desce o tronco controlando com os isquiotibiais.' },
-  mobilidade_tornozelo: { nome: 'Mobilidade de tornozelo', desc: 'Agachamento na parede, joelho à frente do pé, sente o alongamento no tornozelo.' },
-  skip_baixo: { nome: 'Skipping baixo', desc: 'Corrida no lugar com joelhos a meia altura, ritmo controlado.' },
-  skip_alto: { nome: 'Skipping alto', desc: 'Joelhos sobem até à cintura, braços ativos.' },
-  mudanca_direcao: { nome: 'Mudança de direção em "Z"', desc: 'Corre 5m, corta 45°, repete em zig-zag.' },
-  escada_agilidade: { nome: 'Escada de agilidade', desc: 'Usa linhas do campo ou marcas no chão — passos rápidos in-in-out-out.' },
-  sprint: { nome: 'Sprint', desc: 'Esforço máximo na distância indicada, recuperação completa entre repetições.' },
-  saltos_verticais: { nome: 'Saltos verticais', desc: 'Salto explosivo a partir de posição parada, aterragem suave.' },
-  ativacao_prejogo: { nome: 'Ativação pré-jogo', desc: 'Mobilidade + skips leves + 2-3 sprints curtos para preparar o corpo.' },
+  sentadilha_bulgara: { nome: 'Sentadilha búlgara', desc: 'Pé de trás apoiado num banco/cadeira, desce a perna da frente.', exId: 'sentadilha_bulgara' },
+  afundo_impulso: { nome: 'Afundo com impulso controlado', desc: 'Afundo normal — adiciona um pequeno impulso a partir da semana 2.', exId: 'afundo_impulso' },
+  prancha_lateral: { nome: 'Prancha lateral', desc: 'Apoio no antebraço, corpo alinhado, mantém a posição.', exId: 'prancha_lateral' },
+  prancha_perna: { nome: 'Prancha com elevação de perna', desc: 'Prancha frontal, eleva uma perna de cada vez sem rodar o quadril.', exId: 'prancha_perna' },
+  ponte_unilateral: { nome: 'Ponte a uma perna', desc: 'Deitado, uma perna estendida, eleva o quadril com a outra perna apoiada.', exId: 'ponte_unilateral' },
+  step_up: { nome: 'Step-up com tempo sob tensão', desc: 'Sobe a um banco/step controlando bem a descida (3s).', exId: 'step_up' },
+  core_antirrotacao: { nome: 'Core anti-rotação (dead bug)', desc: 'Deitado, braço e perna opostos estendem lentamente sem deixar as costas arquear.', exId: 'core_antirrotacao' },
+  sentadilha_salto: { nome: 'Sentadilha com salto', desc: 'Sentadilha normal, explode para um salto vertical no topo.', exId: 'sentadilha_salto' },
+  step_up_rapido: { nome: 'Step-up rápido', desc: 'Mesmo step-up, agora em ritmo explosivo.', exId: 'step_up_rapido' },
+  nordico: { nome: 'Nórdico (isquiotibiais)', desc: 'Ajoelhado, tornozelos fixos, desce o tronco controlando com os isquiotibiais.', exId: 'nordico' },
+  mobilidade_tornozelo: { nome: 'Mobilidade de tornozelo', desc: 'Agachamento na parede, joelho à frente do pé, sente o alongamento no tornozelo.', exId: 'mobilidade_tornozelo' },
+  skip_baixo: { nome: 'Skipping baixo', desc: 'Corrida no lugar com joelhos a meia altura, ritmo controlado.', exId: 'skip_baixo' },
+  skip_alto: { nome: 'Skipping alto', desc: 'Joelhos sobem até à cintura, braços ativos.', exId: 'skip_alto' },
+  mudanca_direcao: { nome: 'Mudança de direção em "Z"', desc: 'Corre 5m, corta 45°, repete em zig-zag.', exId: 'mudanca_direcao' },
+  escada_agilidade: { nome: 'Escada de agilidade', desc: 'Usa linhas do campo ou marcas no chão — passos rápidos in-in-out-out.', exId: 'escada_agilidade' },
+  sprint: { nome: 'Sprint', desc: 'Esforço máximo na distância indicada, recuperação completa entre repetições.', exId: 'sprint' },
+  saltos_verticais: { nome: 'Saltos verticais', desc: 'Salto explosivo a partir de posição parada, aterragem suave.', exId: 'saltos_verticais' },
+  ativacao_prejogo: { nome: 'Ativação pré-jogo', desc: 'Mobilidade + skips leves + 2-3 sprints curtos para preparar o corpo.', exId: 'ativacao_prejogo' },
 };
 
 function gerarFase1() {
@@ -72,7 +72,7 @@ function gerarFase1() {
           tipo: 'Corrida',
           duracao: `${corridaMin} min`,
           exercicios: [
-            { nome: 'Corrida contínua', desc: 'Ritmo Zona 2 — confortável, capaz de manter conversa.', series: 1, reps: `${corridaMin} minutos` },
+            { nome: 'Corrida contínua', desc: 'Ritmo Zona 2 — confortável, capaz de manter conversa.', series: 1, reps: `${corridaMin} minutos`, exId: 'corrida_continua' },
           ],
         },
         {
@@ -127,7 +127,7 @@ function gerarFase2() {
           tipo: 'Resistência tipo-jogo',
           duracao: '30 min',
           exercicios: [
-            { nome: `Intervalos ${intervalos[s - 1]}`, desc: 'Corrida forte / recuperação ativa, repete durante a sessão.', series: 8, reps: intervalos[s - 1] },
+            { nome: `Intervalos ${intervalos[s - 1]}`, desc: 'Corrida forte / recuperação ativa, repete durante a sessão.', series: 8, reps: intervalos[s - 1], exId: 'intervalos' },
           ],
         },
         {
