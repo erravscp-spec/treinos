@@ -2,7 +2,7 @@
   "name": "plano-de-jogo",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://EDUARDO_GITHUB_USERNAME.github.io/plano-de-jogo",
+  "homepage": "https://erravscp-spec.github.io/plano-de-jogo",
   "dependencies": {
     "firebase": "^10.12.0",
     "react": "^18.2.0",
