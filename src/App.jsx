@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { PHASES, PLANO, TIPO_ICON, hojeNomeDia, sessionKey, totalSessions } from './data';
 import { useProgress, useMetrics } from './useFirebaseData';
 import MetricsView from './MetricsView';
+import { ExerciseIllustration } from './illustrations/exerciseIllustrations';
 
 export default function App() {
   const { progress, loaded, error, toggleSession, setAlternativa } = useProgress();
@@ -170,6 +171,7 @@ export default function App() {
                     <div style={styles.exerciseList}>
                       {sess.exercicios.map((ex, exIdx) => (
                         <div key={exIdx} style={styles.exerciseRow}>
+                          <ExerciseIllustration exId={ex.exId} color={currentPhase.cor} size={56} />
                           <div style={styles.exerciseInfo}>
                             <div style={styles.exerciseNome}>{ex.nome}</div>
                             <div style={styles.exerciseDesc}>{ex.desc}</div>
@@ -344,7 +346,7 @@ const styles = {
   sessionDuracao: { fontSize: 12.5, color: 'rgba(248,247,242,0.5)' },
   checkBtn: { width: 28, height: 28, borderRadius: '50%', border: '1.5px solid rgba(255,255,255,0.3)', color: '#1B4332', fontSize: 14, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' },
   exerciseList: { borderTop: '1px solid rgba(255,255,255,0.08)', padding: '4px 16px 12px' },
-  exerciseRow: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, padding: '10px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' },
+  exerciseRow: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, padding: '10px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' },
   exerciseInfo: { flex: 1 },
   exerciseNome: { fontSize: 13.5, fontWeight: 600, marginBottom: 2 },
   exerciseDesc: { fontSize: 12, color: 'rgba(248,247,242,0.55)', lineHeight: 1.4 },
