@@ -2,7 +2,7 @@
   "name": "treinos",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://erravscp-spec.github.io/plano-de-jogo",
+  "homepage": "https://erravscp-spec.github.io/treinos",
   "dependencies": {
     "firebase": "^10.12.0",
     "react": "^18.2.0",
